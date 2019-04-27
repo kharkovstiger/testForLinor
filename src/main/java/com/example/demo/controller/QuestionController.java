@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = QuestionController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
-@CrossOrigin
+@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
 public class QuestionController {
+
     static final String REST_URL = "/api";
 
     private final QuestionService questionService;
