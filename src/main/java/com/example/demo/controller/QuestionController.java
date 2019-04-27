@@ -9,15 +9,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = Controller.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = QuestionController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 @CrossOrigin
-public class Controller {
+public class QuestionController {
     static final String REST_URL = "/api";
 
     private final QuestionService questionService;
 
     @Autowired
-    public Controller(QuestionService questionService) {
+    public QuestionController(QuestionService questionService) {
         this.questionService = questionService;
     }
 
